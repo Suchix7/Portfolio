@@ -56,8 +56,8 @@ const portfolioData = {
   ],
   contact: {
     email: "chitrakarsujal7@gmail.com",
-    github: "https://github.com/Suchix7",
-    linkedin: "https://www.linkedin.com/in/sujal-chitrakar/",
+    github: "github.com/Suchix7",
+    linkedin: "www.linkedin.com/in/sujal-chitrakar/",
   },
 };
 
