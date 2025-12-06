@@ -34,17 +34,19 @@ const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "Quantum Dashboard",
+      title: "Hackaverse",
+      link: "https://hackaverse.primeitclub.com/",
       description:
         "A high-fidelity data visualization platform built with React and D3, featuring real-time updates and custom charting libraries.",
-      tags: ["React", "D3.js", "Tailwind CSS"],
+      tags: ["React", "Tailwind CSS"],
     },
     {
       id: 2,
-      title: "Aura UI Library",
+      title: "4Donkeys Bar",
+      link: "https://www.4donkey.com.au/",
       description:
         "A set of customizable, accessible, and themeable UI components designed for rapid development across multiple projects.",
-      tags: ["TypeScript", "NPM", "Storybook"],
+      tags: ["React", "Node", "MongoDB", "Node", "Express"],
     },
     {
       id: 3,
@@ -57,7 +59,7 @@ const portfolioData = {
   contact: {
     email: "chitrakarsujal7@gmail.com",
     github: "github.com/Suchix7",
-    linkedin: "www.linkedin.com/in/sujal-chitrakar/",
+    linkedin: "linkedin.com/in/sujal-chitrakar/",
   },
 };
 
@@ -296,7 +298,7 @@ const ProjectCard = ({ project }) => {
               ))}
             </div>
           </div>
-          <div className="lg:w-1/3 flex justify-start lg:justify-end">
+          {/* <div className="lg:w-1/3 flex justify-start lg:justify-end">
             <button
               className={`flex items-center text-white font-medium transition-all duration-500 ${
                 isHovered ? "translate-x-2" : "translate-x-0"
@@ -305,7 +307,7 @@ const ProjectCard = ({ project }) => {
               Explore Case Study
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-          </div>
+          </div> */}
         </div>
       </GlassCard>
     </div>
@@ -324,7 +326,16 @@ const ProjectsSection = () => {
           style={{ perspective: "1000px" }}
         >
           {portfolioData.projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            // Wrap the ProjectCard in an anchor tag
+            <a
+              key={project.id}
+              href={project.link}
+              target="_blank" // Optional: Opens the link in a new tab
+              rel="noopener noreferrer" // Recommended for security when using target="_blank"
+              style={{ textDecoration: "none" }} // Optional: Removes default link underline
+            >
+              <ProjectCard project={project} />
+            </a>
           ))}
         </div>
       </AnimatedSectionWrapper>
