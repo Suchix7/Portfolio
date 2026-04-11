@@ -95,20 +95,20 @@ const Hero = () => {
       </div>
 
       {/* 1. Header HUD */}
-      <nav className="relative z-20 w-full py-6 flex justify-between items-center font-mono text-[8px] tracking-[0.5em] text-white/30 uppercase">
+      <nav className="relative z-20 w-full py-6 flex  justify-between items-center font-mono text-[8px] tracking-[0.5em] text-white/30 uppercase">
         <span className="hidden sm:block">Portfolio_v2.0</span>
         <div className="hidden lg:block h-[1px] w-24 bg-white/10" />
         <span className="text-[#cbf902]/60 font-bold">SUJAL_CHITRAKAR // 2026</span>
       </nav>
 
-      <div className="flex-1 flex flex-col justify-center relative z-10">
+      <div className="flex-1 flex flex-col justify-center relative z-10 ">
         {/* 2. Main Typography Block */}
         <div className="relative mb-16 lg:mb-24">
           <h1 className="flex flex-col font-[1000] tracking-[-0.06em] uppercase whitespace-nowrap leading-[0.8]">
-            <div className="overflow-hidden text-[clamp(4rem,15vw,12rem)]">
+            <div className="overflow-hidden text-[clamp(2rem,8vw,12rem)] md:text-[clamp(4rem,12vw,12rem)]">
               {wrapChars("SUJAL")}
             </div>
-            <div className="overflow-hidden text-[#cbf902] italic text-[clamp(3.2rem,12.5vw,10.5rem)] leading-[0.7] mt-[-0.1em]">
+            <div className="text-[#cbf902] italic text-[clamp(2rem,8vw,19rem)] md:text-[clamp(3.2rem,9vw,10.5rem)] leading-[0.7] mt-[-0.05em] md:mt-[-0.1em]">
               {wrapChars("CHITRAKAR")}
             </div>
           </h1>
@@ -124,17 +124,17 @@ const Hero = () => {
         </div>
 
         {/* 3. Narrative Block */}
-        <div className="hero-content-block w-full max-w-6xl">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start lg:items-end">
+        <div className="hero-content-block w-full max-w-7xl s">
+          <div className="flex flex-col m-2 lg:flex-row gap-12 lg:gap-24 items-start lg:items-end">
 
             <div className="flex-1 border-l-2 border-[#cbf902] pl-6 md:pl-10 py-1">
-              <p className="text-xl md:text-3xl lg:text-[2.8rem] font-bold leading-[1.1] tracking-tight text-white/95 uppercase max-w-2xl">
+              <p className="text-sm  md:text-2xl lg:text-[2rem] font-bold leading-[1.1] tracking-tight text-white/95 uppercase max-w-2xl">
                 Developing digital products <br className="hidden md:block" />
                 that define <span className="text-[#cbf902] italic border-b-2 border-[#cbf902]/30">Performance</span>.
               </p>
               <div className="flex items-center gap-4 mt-6">
                 <div className="w-8 h-[1px] bg-white/20" />
-                <p className="text-white/40 font-mono text-[9px] md:text-[10px] tracking-[0.4em] uppercase">
+                <p className="text-white/40 font-mono text-[8px] md:text-[10px] tracking-[0.4em] uppercase">
                   Frontend Engineering // Design Systems
                 </p>
               </div>
@@ -142,9 +142,9 @@ const Hero = () => {
 
             <button
               onClick={handleEnterStudio}
-              className="group relative flex items-center gap-6 border border-white/10 px-10 py-6 md:px-14 md:py-8 transition-all duration-500 hover:border-[#cbf902] overflow-hidden bg-[#0a0a0a]"
+              className="group relative flex items-center gap-6 border border-white/10 px-8 py-5 md:px-14 md:py-8 transition-all duration-500 hover:border-[#cbf902] overflow-hidden bg-[#0a0a0a]"
             >
-              <span className="relative z-10 text-[10px] md:text-xs font-black tracking-[0.5em] uppercase group-hover:text-black transition-colors duration-300">
+              <span className="relative z-10 text-[9px] md:text-xs font-black tracking-[0.5em] uppercase group-hover:text-black transition-colors duration-300">
                 Enter Studio
               </span>
               <div className="absolute inset-0 bg-[#cbf902] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.87,0,0.13,1)]" />

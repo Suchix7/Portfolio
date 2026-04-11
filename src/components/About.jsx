@@ -33,10 +33,10 @@ const About = () => {
       className="relative min-h-screen bg-[#050505] text-white py-32 border-t border-white/5 overflow-hidden"
     >
       {/* Background Index Anchor */}
-      <div className="absolute top-10 left-[-2%] text-[35vw] font-black text-white/[0.01] leading-none pointer-events-none select-none italic">
+      <div className="absolute top-10 left-[-2%] text-[35vw] md:text-[35vw] font-black text-white/[0.01] leading-none pointer-events-none select-none italic hidden sm:block">
         01
       </div>
-
+      持
       <div className="container relative z-10 px-6 md:px-20 lg:px-32 mx-auto">
         {/* Changed to flex-col for a Top-Down layout */}
         <div className="flex flex-col space-y-24 md:space-y-32">
@@ -48,7 +48,7 @@ const About = () => {
               Identity_Core // System_Log
             </div>
             {/* Title expanded to full width for impact */}
-            <h2 className="reveal-item text-[12vw] md:text-[10vw] font-black uppercase italic leading-[0.8] tracking-[-0.04em]">
+            <h2 className="reveal-item text-[9vw] md:text-[10vw] font-black uppercase italic leading-[0.8] tracking-[-0.04em]">
               The <span className="text-[#cbf902]">Architect</span>
             </h2>
           </div>
@@ -64,25 +64,25 @@ const About = () => {
             </div>
 
             {/* Metrics HUD (Spans 5 columns) */}
-            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-10">
-              <div className="reveal-item border-l border-white/10 pl-6 space-y-4 group hover:border-[#cbf902] transition-colors">
+            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
+              <div className="reveal-item border-l border-white/10 pl-6 space-y-3 md:space-y-4 group hover:border-[#cbf902] transition-colors">
                 <span className="font-mono text-[8px] text-white/20 tracking-[0.4em] uppercase">Log_01</span>
                 <div className="flex items-baseline gap-2">
-                  <h4 className="text-6xl font-black italic tracking-tighter leading-none">03+</h4>
+                  <h4 className="text-5xl md:text-6xl font-black italic tracking-tighter leading-none">03+</h4>
                   <span className="text-[10px] font-mono text-white/20 uppercase">Years</span>
                 </div>
-                <p className="text-[11px] text-white/40 leading-relaxed font-mono uppercase">
+                <p className="text-[10px] md:text-[11px] text-white/40 leading-relaxed font-mono uppercase">
                   Focused on MERN & Motion Engineering.
                 </p>
               </div>
 
-              <div className="reveal-item border-l border-white/10 pl-6 space-y-4 group hover:border-[#cbf902] transition-colors">
+              <div className="reveal-item border-l border-white/10 pl-6 space-y-3 md:space-y-4 group hover:border-[#cbf902] transition-colors">
                 <span className="font-mono text-[8px] text-white/20 tracking-[0.4em] uppercase">Log_02</span>
                 <div className="flex items-baseline gap-2">
-                  <h4 className="text-6xl font-black italic tracking-tighter text-[#cbf902] leading-none">65+</h4>
+                  <h4 className="text-5xl md:text-6xl font-black italic tracking-tighter text-[#cbf902] leading-none">65+</h4>
                   <span className="text-[10px] font-mono text-white/20 uppercase">Units</span>
                 </div>
-                <p className="text-[11px] text-white/40 leading-relaxed font-mono uppercase">
+                <p className="text-[10px] md:text-[11px] text-white/40 leading-relaxed font-mono uppercase">
                   Global System Deployments.
                 </p>
               </div>

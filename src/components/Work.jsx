@@ -5,9 +5,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { id: 1, title: "MCLAREN-STRAT", category: "Performance UI", image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=2000&auto=format&fit=crop" },
-  { id: 2, title: "APEX-VISION", category: "Motion System", image: "https://images.unsplash.com/photo-1618224395976-141440643794?q=80&w=2000&auto=format&fit=crop" },
-  { id: 3, title: "CORE-ENGINE", category: "Digital Architecture", image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2000&auto=format&fit=crop" },
+  { id: 1, title: "Yug Tech", category: "Ecommerce", image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=2000&auto=format&fit=crop" },
+  { id: 2, title: "Stories", category: "Bar & Lounge", image: "https://images.unsplash.com/photo-1618224395976-141440643794?q=80&w=2000&auto=format&fit=crop" },
+  { id: 3, title: "HACKAVERSE", category: "Hackathon", image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2000&auto=format&fit=crop" },
   { id: 4, title: "VELOCITY-OS", category: "React Framework", image: "https://images.unsplash.com/photo-1614162692292-7ac56d7fd761?q=80&w=2000&auto=format&fit=crop" },
   { id: 5, title: "AERO-DYNAMICS", category: "Motion System", image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2000&auto=format&fit=crop" },
   { id: 6, title: "QUANTUM-UI", category: "Performance UI", image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2000&auto=format&fit=crop" },

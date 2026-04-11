@@ -59,12 +59,12 @@ const CustomCursor = () => {
 
   return (
     <>
-      <div 
-        ref={outerRef} 
+      <div
+        ref={outerRef}
         className="fixed top-0 left-0 w-10 h-10 border border-white/50 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 mix-blend-difference"
       />
-      <div 
-        ref={innerRef} 
+      <div
+        ref={innerRef}
         className="fixed top-0 left-0 w-1.5 h-1.5 bg-[#cbf902] rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2"
       />
     </>
