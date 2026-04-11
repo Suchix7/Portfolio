@@ -6,7 +6,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const socialLinks = [
   { name: 'Instagram', url: 'https://www.instagram.com/sujal_chitrakar' },
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/sujal-chitrakar' }
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/sujal-chitrakar' },
+  { name: 'Github', url: 'https://github.com/Suchix7' }
 ];
 const Contact = () => {
   const sectionRef = useRef(null);

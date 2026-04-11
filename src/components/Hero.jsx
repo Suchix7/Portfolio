@@ -111,6 +111,7 @@ const Hero = () => {
             <div className="text-[#cbf902] italic text-[clamp(2rem,8vw,19rem)] md:text-[clamp(3.2rem,9vw,10.5rem)] leading-[0.7] mt-[-0.05em] md:mt-[-0.1em]">
               {wrapChars("CHITRAKAR")}
             </div>
+            <span className="sr-only">Web Designer & Digital Architect in Kathmandu, Nepal</span>
           </h1>
 
           {/* Coordinate HUD */}
