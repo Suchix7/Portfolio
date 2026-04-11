@@ -124,10 +124,10 @@ const Hero = () => {
         </div>
 
         {/* 3. Narrative Block */}
-        <div className="hero-content-block w-full max-w-7xl s">
+        <div className="hero-content-block w-full max-w-7xl ">
           <div className="flex flex-col m-2 lg:flex-row gap-12 lg:gap-24 items-start lg:items-end">
 
-            <div className="flex-1 border-l-2 border-[#cbf902] pl-6 md:pl-10 py-1">
+            <div className="flex-1 border-l-2 border-[#cbf902] pl-6 md:pl-10 py-1 ">
               <p className="text-sm  md:text-2xl lg:text-[2rem] font-bold leading-[1.1] tracking-tight text-white/95 uppercase max-w-2xl">
                 Developing digital products <br className="hidden md:block" />
                 that define <span className="text-[#cbf902] italic border-b-2 border-[#cbf902]/30">Performance</span>.
