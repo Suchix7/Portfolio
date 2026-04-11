@@ -9,11 +9,9 @@ const allProjects = [
   { id: 2, title: "STORIES", category: "Bar & Lounge", image: "https://images.unsplash.com/photo-1690021416421-3ef951a6494d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyJTIwYW5kJTIwbG91bmdlfGVufDB8fDB8fHww", url: "https://www.storiesloungenyc.com/" },
   { id: 3, title: "HACKAVERSE", category: "Hackathon", image: "https://images.unsplash.com/photo-1638029202288-451a89e0d55f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFja2F0aG9ufGVufDB8fDB8fHww", url: "https://hackaversev2.primeitclub.com/" },
   { id: 4, title: "4Donkeys", category: "Bar NYC", image: "https://images.unsplash.com/photo-1597290282695-edc43d0e7129?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww", url: "https://www.4donkey.com.au/" },
-  { id: 5, title: "PRIME IT CLUB", category: "CLUB WEBSTIE", image: "https://images.unsplash.com/photo-1536148935331-408321065b18?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fElUfGVufDB8fDB8fHww", url: "https://www.primeitclub.com/" },
-  // 6 and 7 are hidden for now based on your request
+  { id: 5, title: "PRIME IT CLUB", category: "CLUB WEBSITE", image: "https://images.unsplash.com/photo-1536148935331-408321065b18?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fElUfGVufDB8fDB8fHww", url: "https://www.primeitclub.com/" },
 ];
 
-// Limiting to first 5
 const projects = allProjects.slice(0, 5);
 
 const Work = () => {
@@ -63,10 +61,9 @@ const Work = () => {
       // 4. Image Parallax Reveal
       projects.forEach((_, i) => {
         gsap.fromTo(`.work-img-${i}`,
-          { scale: 1.4, filter: 'grayscale(100%)' },
+          { scale: 1.4 },
           {
             scale: 1,
-            filter: 'grayscale(100%)',
             scrollTrigger: {
               trigger: `.work-card-${i}`,
               containerAnimation: pin,
@@ -84,6 +81,21 @@ const Work = () => {
 
   return (
     <section id="work" ref={sectionRef} className="relative bg-[#0a0a0a] overflow-hidden">
+
+      {/* --- NEW TITLE ADDED HERE --- */}
+      <div className="absolute top-8 left-6 md:top-12 md:left-12 lg:left-20 z-50 pointer-events-none">
+        <h2 className="text-white text-4xl md:text-6xl font-[1000] uppercase tracking-tighter leading-none">
+          Works<span className="text-[#cbf902]">.</span>
+        </h2>
+        <div className="flex items-center gap-4 mt-3">
+          <div className="w-8 h-[1px] bg-[#cbf902]/50" />
+          <p className="text-white/40 font-mono text-[8px] md:text-[10px] tracking-[0.4em] uppercase">
+            Selected Projects
+          </p>
+        </div>
+      </div>
+      {/* ---------------------------- */}
+
       <div
         ref={bgTextRef}
         className="absolute top-1/2 left-40 -translate-y-1/2 text-[35vw] font-black text-white/[0.015] uppercase pointer-events-none select-none z-0 whitespace-nowrap"
@@ -101,38 +113,37 @@ const Work = () => {
             key={project.id}
             className={`work-card-${i} w-screen px-6 md:px-32 flex flex-col items-center justify-center relative`}
           >
-            {/* Wrapped in Anchor Tag for navigation */}
             <a
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative w-full max-w-5xl aspect-[16/9] overflow-hidden group border border-white/5 block"
+              className="relative w-full max-w-5xl aspect-[16/9] overflow-hidden group border border-white/5 block mt-12 md:mt-0"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className={`work-img-${i} absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:filter-none group-hover:scale-105`}
+                className={`work-img-${i} absolute inset-0 w-full h-full object-cover transition-all duration-1000 grayscale-0 md:grayscale md:group-hover:grayscale-0 md:group-hover:scale-105`}
               />
 
-              <div className="absolute inset-0 bg-black/50 group-hover:bg-transparent transition-colors duration-700" />
+              <div className="absolute inset-0 bg-black/20 md:bg-black/50 md:group-hover:bg-transparent transition-colors duration-700" />
 
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-10">
                 <div className="overflow-hidden mb-4">
-                  <span className="block text-[#cbf902] font-mono uppercase tracking-[0.6em] text-[10px] translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <span className="block text-[#cbf902] font-mono uppercase tracking-[0.6em] text-[10px] translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500">
                     {project.category}
                   </span>
                 </div>
 
                 <div className="overflow-hidden">
-                  <h3 className="text-white text-5xl md:text-8xl font-black uppercase tracking-tighter translate-y-full group-hover:translate-y-0 transition-transform duration-700 delay-100">
+                  <h3 className="text-white text-2xl sm:text-5xl md:text-8xl font-black uppercase tracking-tighter translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-700 md:delay-100">
                     {project.title}
                   </h3>
                 </div>
 
-                <div className="mt-8 flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300">
-                  <div className="w-12 h-[1px] bg-white/30" />
-                  <span className="text-white font-mono text-[9px] uppercase tracking-widest">Visit Site</span>
-                  <div className="w-12 h-[1px] bg-white/30" />
+                <div className="mt-8 flex items-center gap-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-500 md:delay-300">
+                  <div className="w-8 md:w-12 h-[1px] bg-white/50 md:bg-white/30" />
+                  <span className="text-white font-mono text-[9px] uppercase tracking-widest drop-shadow-md md:drop-shadow-none">Visit Site</span>
+                  <div className="w-8 md:w-12 h-[1px] bg-white/50 md:bg-white/30" />
                 </div>
               </div>
             </a>
@@ -156,4 +167,4 @@ const Work = () => {
   );
 };
 
-export default Work;  
+export default Work;

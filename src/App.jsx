@@ -37,28 +37,38 @@ const App = () => {
             <div className="relative">
               <CustomCursor />
 
-              <main className="relative z-10">
+              <main className="relative z-10" role="main">
                 {/* HUD Guideline: A single, thin vertical line 
                    that runs through the site for technical symmetry 
                 */}
                 <div className="fixed left-6 md:left-12 lg:left-20 top-0 w-[1px] h-full bg-white/5 pointer-events-none z-0" />
 
-                <Hero />
+                <div aria-label="Hero Section">
+                  <Hero />
+                </div>
 
                 {/* Spacial Buffer: In high-end design, we use 
                    intentional "dead air" between sections 
                 */}
 
-                <Work />
-                <About />
-                <Contact />
+                <div aria-label="Work Portfolio Section">
+                  <Work />
+                </div>
+                
+                <div aria-label="About Section">
+                  <About />
+                </div>
+
+                <div aria-label="Contact Section">
+                  <Contact />
+                </div>
 
                 {/* Global Performance Signature */}
-                <div className="py-10 text-center opacity-10 pointer-events-none">
+                <footer className="py-10 text-center opacity-10 pointer-events-none" aria-hidden="true">
                   <span className="text-[10px] font-mono tracking-[1em] uppercase">
                     System_Output // Digital_Architect_2026
                   </span>
-                </div>
+                </footer>
               </main>
             </div>
           </SmoothScroll>

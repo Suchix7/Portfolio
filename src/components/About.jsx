@@ -79,7 +79,7 @@ const About = () => {
               <div className="reveal-item border-l border-white/10 pl-6 space-y-3 md:space-y-4 group hover:border-[#cbf902] transition-colors">
                 <span className="font-mono text-[8px] text-white/20 tracking-[0.4em] uppercase">Log_02</span>
                 <div className="flex items-baseline gap-2">
-                  <h4 className="text-5xl md:text-6xl font-black italic tracking-tighter text-[#cbf902] leading-none">65+</h4>
+                  <h4 className="text-5xl md:text-6xl font-black italic tracking-tighter text-[#cbf902] leading-none">20+</h4>
                   <span className="text-[10px] font-mono text-white/20 uppercase">Units</span>
                 </div>
                 <p className="text-[10px] md:text-[11px] text-white/40 leading-relaxed font-mono uppercase">
