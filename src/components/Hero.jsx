@@ -125,9 +125,9 @@ const Hero = () => {
 
         {/* 3. Narrative Block */}
         <div className="hero-content-block w-full max-w-7xl mt-12 md:mt-20">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
-            <div className="flex-1 border-l-2 border-[#cbf902] pl-6 md:pl-12 py-1">
-              <p className="text-sm md:text-xl lg:text-[1.8rem] font-bold leading-[1.2] tracking-tight text-white/95 uppercase max-w-xl">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 ">
+            <div className="flex-1 border-l-10 border-[#cbf902] pl-6 md:pl-12 py-1">
+              <p className="text-sm md:text-xl lg:text-[1.8rem] font-bold leading-[1.2] tracking-tight text-white/95 uppercase max-w-xl ">
                 Developing digital products <br className="hidden md:block" />
                 that define <span className="text-[#cbf902] italic border-b-2 border-[#cbf902]/30">Performance</span>.
               </p>
