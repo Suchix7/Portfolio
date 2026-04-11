@@ -36,7 +36,7 @@ const About = () => {
       <div className="absolute top-10 left-[-2%] text-[35vw] md:text-[35vw] font-black text-white/[0.01] leading-none pointer-events-none select-none italic hidden sm:block">
         01
       </div>
-      持
+
       <div className="container relative z-10 px-6 md:px-20 lg:px-32 mx-auto">
         {/* Changed to flex-col for a Top-Down layout */}
         <div className="flex flex-col space-y-24 md:space-y-32">
@@ -96,7 +96,7 @@ const About = () => {
             </div>
             <div className="flex gap-4">
               {['React', 'GSAP', 'Next', 'Node'].map((tech) => (
-                <span key={tech} className="text-[9px] font-mono text-white/30 px-3 py-1 border border-white/10 uppercase hover:text-[#cbf902] hover:border-[#cbf902] transition-all">
+                <span key={tech} className="text-[10px] sm:text-[18px] font-mono text-white/30 px-3 py-1 border border-white/10 uppercase hover:text-[#cbf902] hover:border-[#cbf902] transition-all">
                   {tech}
                 </span>
               ))}

@@ -57,7 +57,7 @@ const Contact = () => {
         <div className="w-full max-w-fit mx-auto space-y-0">
 
           <div className="overflow-hidden py-1 px-4">
-            <h2 className="reveal-item text-[clamp(2rem,8vw,8rem)] md:text-[clamp(2rem,7vw,8rem)] font-black leading-[1] uppercase italic text-white/40 tracking-[-0.02em] whitespace-nowrap px-[0.1em]">
+            <h2 className="reveal-item text-[clamp(2rem,8vw,8rem)] md:text-[clamp(2rem,7vw,8rem)] font-black leading-[1] uppercase italic text-white/75 tracking-[-0.02em] whitespace-nowrap px-[0.1em]">
               READY TO
             </h2>
           </div>
@@ -85,14 +85,14 @@ const Contact = () => {
             <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b border-r border-[#cbf902] opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
 
-          <div className="flex gap-10 opacity-30">
+          <div className="flex gap-10 opacity-30 ">
             {socialLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono uppercase tracking-widest text-[8px] hover:text-[#cbf902] transition-colors"
+                className="font-mono uppercase tracking-widest text-[10px] sm:text-[16px] hover:text-[#cbf902] transition-colors"
               >
                 {link.name}
               </a>

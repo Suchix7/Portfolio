@@ -61,7 +61,7 @@ const Hero = () => {
   const handleEnterStudio = () => {
     gsap.to(window, {
       duration: 1.8,
-      scrollTo: "#about",
+      scrollTo: "#work",
       ease: "expo.inOut"
     });
   };
@@ -95,7 +95,7 @@ const Hero = () => {
       </div>
 
       {/* 1. Header HUD */}
-      <nav className="relative z-20 w-full py-6 flex  justify-between items-center font-mono text-[8px] tracking-[0.5em] text-white/30 uppercase">
+      <nav className="relative z-20 w-full py-6 flex  justify-between items-center font-mono text-[8px] tracking-[0.5em] text-white/30 uppercase mt-12">
         <span className="hidden sm:block">Portfolio_v2.0</span>
         <div className="hidden lg:block h-[1px] w-24 bg-white/10" />
         <span className="text-[#cbf902]/60 font-bold">SUJAL_CHITRAKAR // 2026</span>
@@ -124,16 +124,15 @@ const Hero = () => {
         </div>
 
         {/* 3. Narrative Block */}
-        <div className="hero-content-block w-full max-w-7xl ">
-          <div className="flex flex-col m-2 lg:flex-row gap-12 lg:gap-24 items-start lg:items-end">
-
-            <div className="flex-1 border-l-2 border-[#cbf902] pl-6 md:pl-10 py-1 ">
-              <p className="text-sm  md:text-2xl lg:text-[2rem] font-bold leading-[1.1] tracking-tight text-white/95 uppercase max-w-2xl">
+        <div className="hero-content-block w-full max-w-7xl mt-12 md:mt-20">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
+            <div className="flex-1 border-l-2 border-[#cbf902] pl-6 md:pl-12 py-1">
+              <p className="text-sm md:text-xl lg:text-[1.8rem] font-bold leading-[1.2] tracking-tight text-white/95 uppercase max-w-xl">
                 Developing digital products <br className="hidden md:block" />
                 that define <span className="text-[#cbf902] italic border-b-2 border-[#cbf902]/30">Performance</span>.
               </p>
               <div className="flex items-center gap-4 mt-6">
-                <div className="w-8 h-[1px] bg-white/20" />
+                <div className="w-10 h-[1px] bg-white/20" />
                 <p className="text-white/40 font-mono text-[8px] md:text-[10px] tracking-[0.4em] uppercase">
                   Frontend Engineering // Design Systems
                 </p>
@@ -142,7 +141,7 @@ const Hero = () => {
 
             <button
               onClick={handleEnterStudio}
-              className="group relative flex items-center gap-6 border border-white/10 px-8 py-5 md:px-14 md:py-8 transition-all duration-500 hover:border-[#cbf902] overflow-hidden bg-[#0a0a0a]"
+              className="group relative flex items-center gap-6 border border-white/10 px-8 py-5 md:px-12 md:py-7 transition-all duration-500 hover:border-[#cbf902] overflow-hidden bg-transparent"
             >
               <span className="relative z-10 text-[9px] md:text-xs font-black tracking-[0.5em] uppercase group-hover:text-black transition-colors duration-300">
                 Enter Studio

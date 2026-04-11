@@ -24,18 +24,16 @@ const Work = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const totalWidth = (projects.length - 1) * window.innerWidth;
-
       // 1. Horizontal Pinning
       const pin = gsap.to(containerRef.current, {
-        x: -totalWidth,
+        x: () => -(containerRef.current.scrollWidth - window.innerWidth),
         ease: "none",
         scrollTrigger: {
           trigger: sectionRef.current,
           pin: true,
           scrub: 1,
           start: "top top",
-          end: () => `+=${totalWidth}`,
+          end: () => `+=${window.innerHeight * 4}`,
           invalidateOnRefresh: true,
         }
       });
@@ -85,7 +83,7 @@ const Work = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-[#0a0a0a] overflow-hidden">
+    <section id="work" ref={sectionRef} className="relative bg-[#0a0a0a] overflow-hidden">
       <div
         ref={bgTextRef}
         className="absolute top-1/2 left-40 -translate-y-1/2 text-[35vw] font-black text-white/[0.015] uppercase pointer-events-none select-none z-0 whitespace-nowrap"
