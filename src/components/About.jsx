@@ -37,7 +37,7 @@ const About = () => {
         01
       </div>
 
-      <div className="container relative z-10 px-6 md:px-20 lg:px-32 mx-auto">
+      <div className="container relative z-10 px-6 sm:px-12 md:px-24 lg:px-40 mx-auto">
         {/* Changed to flex-col for a Top-Down layout */}
         <div className="flex flex-col space-y-24 md:space-y-32">
 

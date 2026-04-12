@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import SmoothScroll from './components/SmoothScroll';
-import CustomCursor from './components/CustomCursor';
-import Hero from './components/Hero';
-import Work from './components/Work';
-import About from './components/About';
-import Contact from './components/Contact';
-import Preloader from './components/Preloader';
-import ErrorBoundary from './components/ErrorBoundary';
+import React, { useState, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SmoothScroll from "./components/SmoothScroll";
+import CustomCursor from "./components/CustomCursor";
+import Hero from "./components/Hero";
+import Work from "./components/Work";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Preloader from "./components/Preloader";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -54,7 +54,7 @@ const App = () => {
                 <div aria-label="Work Portfolio Section">
                   <Work />
                 </div>
-                
+
                 <div aria-label="About Section">
                   <About />
                 </div>
@@ -64,7 +64,10 @@ const App = () => {
                 </div>
 
                 {/* Global Performance Signature */}
-                <footer className="py-10 text-center opacity-10 pointer-events-none" aria-hidden="true">
+                <footer
+                  className="py-10 text-center opacity-10 pointer-events-none"
+                  aria-hidden="true"
+                >
                   <span className="text-[10px] font-mono tracking-[1em] uppercase">
                     System_Output // Digital_Architect_2026
                   </span>
