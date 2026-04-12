@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SmoothScroll from "./components/SmoothScroll";
 import CustomCursor from "./components/CustomCursor";
 import Hero from "./components/Hero";
+import Showcase from "./components/Showcase";
 import Work from "./components/Work";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -41,7 +42,7 @@ const App = () => {
                 {/* HUD Guideline: A single, thin vertical line 
                    that runs through the site for technical symmetry 
                 */}
-                <div className="fixed left-6 md:left-12 lg:left-20 top-0 w-[1px] h-full bg-white/5 pointer-events-none z-0" />
+                <div className="fixed left-6 md:left-12 lg:left-20 top-0 w-px h-full bg-white/5 pointer-events-none z-0" />
 
                 <div aria-label="Hero Section">
                   <Hero />
@@ -58,7 +59,9 @@ const App = () => {
                 <div aria-label="About Section">
                   <About />
                 </div>
-
+                <div aria-label="Showcase Section">
+                  <Showcase />
+                </div>
                 <div aria-label="Contact Section">
                   <Contact />
                 </div>

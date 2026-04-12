@@ -6,7 +6,6 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const Hero = () => {
   const containerRef = useRef(null);
-  const marqueeRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -14,6 +13,7 @@ const Hero = () => {
 
       // 1. Entrance Animation
       tl.set(".hero-char", { yPercent: 120 })
+        .set(".hero-name-block", { autoAlpha: 1 })
         .to(".hero-char", {
           yPercent: 0,
           stagger: 0.02,
@@ -99,7 +99,8 @@ const Hero = () => {
       {/* BACKGROUND LAYER 2: Moving Kinetic Marquee */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.03]">
         <div className="marquee-inner w-full rotate-[-5deg] scale-110">
-          <div className="flex whitespace-nowrap animate-marquee font-black text-[20vw] leading-none uppercase tracking-tighter italic">
+          <div className="marquee-track flex w-max whitespace-nowrap font-black text-[20vw] leading-none uppercase tracking-tighter italic">
+            <span>PRECISION SPEED PRECISION SPEED PRECISION SPEED&nbsp;</span>
             <span>PRECISION SPEED PRECISION SPEED PRECISION SPEED&nbsp;</span>
             <span>PRECISION SPEED PRECISION SPEED PRECISION SPEED&nbsp;</span>
           </div>
@@ -109,7 +110,7 @@ const Hero = () => {
       {/* 1. Header HUD */}
       <nav className="relative z-20 w-full py-6 flex  justify-between items-center font-mono text-[8px] tracking-[0.5em] text-white/30 uppercase mt-12">
         <span className="hidden sm:block">Portfolio_v2.0</span>
-        <div className="hidden lg:block h-[1px] w-24 bg-white/10" />
+        <div className="hidden lg:block h-px w-24 bg-white/10" />
         <span className="text-[#cbf902]/60 font-bold">
           SUJAL_CHITRAKAR // 2026
         </span>
@@ -118,7 +119,7 @@ const Hero = () => {
       <div className="flex-1 gap-8  flex flex-col justify-center relative z-10 max-w-full">
         {/* 2. Main Typography Block */}
         <div className="relative mb-32 lg:mb-48 w-full">
-          <h1 className="flex flex-col gap-2 font-[1000] tracking-[-0.06em] uppercase whitespace-nowrap leading-[0.8]">
+          <h1 className="hero-name-block opacity-0 flex flex-col gap-2 font-[1000] tracking-[-0.06em] uppercase whitespace-nowrap leading-[0.8]">
             <div className="overflow-hidden text-[clamp(2rem,8vw,12rem)] md:text-[clamp(4rem,12vw,12rem)]">
               {wrapChars("SUJAL")}
             </div>
@@ -153,7 +154,7 @@ const Hero = () => {
                 .
               </p>
               <div className="flex items-center gap-4 mt-6">
-                <div className="w-10 h-[1px] bg-white/20" />
+                <div className="w-10 h-px bg-white/20" />
                 <p className="text-white/40 font-mono text-[8px] md:text-[10px] tracking-[0.4em] uppercase">
                   Frontend Engineering // Design Systems
                 </p>
@@ -174,7 +175,7 @@ const Hero = () => {
       </div>
 
       {/* 4. Footer HUD Line */}
-      <div className="w-full h-[1px] bg-white/5 absolute bottom-24 left-0" />
+      <div className="w-full h-px bg-white/5 absolute bottom-24 left-0" />
 
       <footer className="w-full py-8 flex justify-between items-end opacity-20 pointer-events-none">
         <div className="space-y-1">
@@ -193,10 +194,11 @@ const Hero = () => {
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          100% { transform: translateX(-33.333333%); }
         }
-        .animate-marquee {
-          animation: marquee 25s linear infinite;
+        .marquee-track {
+          animation: marquee 65s linear infinite;
+          will-change: transform;
         }
       `}</style>
     </section>

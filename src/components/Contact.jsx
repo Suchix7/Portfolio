@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const socialLinks = [
-  { name: 'Instagram', url: 'https://www.instagram.com/sujal_chitrakar' },
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/sujal-chitrakar' },
-  { name: 'Github', url: 'https://github.com/Suchix7' }
+  { name: "Instagram", url: "https://www.instagram.com/sujal_chitrakar" },
+  { name: "LinkedIn", url: "https://linkedin.com/in/sujal-chitrakar" },
+  { name: "Github", url: "https://github.com/Suchix7" },
 ];
 const Contact = () => {
   const sectionRef = useRef(null);
@@ -17,7 +17,13 @@ const Contact = () => {
   useEffect(() => {
     const updateClock = () => {
       const now = new Date();
-      setTime(now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+      setTime(
+        now.toLocaleTimeString("en-GB", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        }),
+      );
     };
     const timer = setInterval(updateClock, 1000);
     updateClock();
@@ -27,7 +33,7 @@ const Contact = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 60%",
-        }
+        },
       });
 
       tl.from(".reveal-item", {
@@ -35,7 +41,7 @@ const Contact = () => {
         rotateX: -15,
         stagger: 0.1,
         duration: 1.2,
-        ease: "expo.out"
+        ease: "expo.out",
       });
     }, sectionRef);
 
@@ -46,17 +52,22 @@ const Contact = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative h-screen w-full flex items-center justify-center bg-[#0a0a0a] overflow-hidden border-t border-white/5">
-
+    <section
+      ref={sectionRef}
+      className="relative h-screen w-full flex items-center justify-center bg-[#0a0a0a] overflow-hidden border-t border-white/5"
+    >
       {/* Background HUD Grid */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
-        style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '60px 60px' }}
+      <div
+        className="absolute inset-0 opacity-[0.02] pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
       />
 
       <div className="z-10 w-full px-6 text-center flex flex-col items-center">
-
         <div className="w-full max-w-fit mx-auto space-y-0">
-
           <div className="overflow-hidden py-1 px-4">
             <h2 className="reveal-item text-[clamp(2rem,8vw,8rem)] md:text-[clamp(2rem,7vw,8rem)] font-black leading-[1] uppercase italic text-white/75 tracking-[-0.02em] whitespace-nowrap px-[0.1em]">
               READY TO
@@ -64,11 +75,10 @@ const Contact = () => {
           </div>
 
           <div className="overflow-hidden py-1 px-4">
-            <h2 className="reveal-item text-[clamp(1.8rem,7vw,8.5rem)] md:text-[clamp(2.3rem,7.5vw,8.5rem)] font-black leading-[1] uppercase text-[#cbf902] tracking-[-0.02em] whitespace-nowrap px-[0.1em]">
+            <h2 className="reveal-item text-[clamp(1.5rem,7vw,8.5rem)] md:text-[clamp(2.3rem,7.5vw,8.5rem)] font-black leading-[1] uppercase text-[#cbf902] tracking-[-0.02em] whitespace-nowrap px-[0.1em]">
               COLLABORATE?
             </h2>
           </div>
-
         </div>
 
         {/* CTA Section - Adjusted spacing for smaller font */}
@@ -107,13 +117,14 @@ const Contact = () => {
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 bg-[#cbf902] rounded-full animate-pulse" />
-            <span className="text-white/10 text-[7px] hidden sm:block">Status // Available</span>
+            <span className="text-white/10 text-[7px] hidden sm:block">
+              Status // Available
+            </span>
           </div>
           <span className="text-white/30">{time} KTM_NP</span>
         </div>
         <div className="text-white/10">Sujal_C // 2.0</div>
       </footer>
-
     </section>
   );
 };
