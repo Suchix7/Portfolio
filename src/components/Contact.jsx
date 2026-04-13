@@ -66,7 +66,7 @@ const Contact = () => {
         }}
       />
 
-      <div className="z-10 w-full px-6 text-center flex flex-col items-center gap-2 md:gap-10">
+      <div className="z-10 w-full px-6 text-center flex flex-col items-center gap-2 sm:gap-4go md:gap-10">
         <div className="w-full max-w-fit mx-auto space-y-0">
           <div className="overflow-hidden py-1 px-4">
             <h2 className="reveal-item text-[clamp(2rem,8vw,8rem)] md:text-[7vw] font-black leading-[1] uppercase italic text-white/75 tracking-[-0.02em] whitespace-nowrap px-[0.1em]">
@@ -85,14 +85,14 @@ const Contact = () => {
         <div className=" flex flex-col items-center gap-14 mt-10">
           <div className="relative group ">
            <a
-  ref={magneticButton}
-  href="mailto:chitrakarsujal7@gmail.com"
-  className="inline-block px-10 py-5 md:px-12 md:py-6 border border-white/20 font-bold uppercase tracking-[0.3em] 
-             sm:text-[12px] lg:text-[0.8vw] 
-             transition-all hover:bg-[#cbf902] hover:text-black hover:border-[#cbf902]"
->
-  Start_Protocol
-</a>
+            ref={magneticButton}
+            href="mailto:chitrakarsujal7@gmail.com"
+            className="inline-block px-10 py-5 md:px-12 md:py-6 border border-white/20 font-bold uppercase tracking-[0.3em] 
+                      text-[3vw] sm:text-[1.8vw] md:text-[1.8vw] lg:text-[1.6vw] 
+                      transition-all hover:bg-[#cbf902] hover:text-black hover:border-[#cbf902]"
+          >
+            Start_Protocol
+          </a>
             {/* Technical Brackets */}
             <div className="absolute -top-1 -left-1 w-2 h-2 border-t border-l border-[#cbf902] opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b border-r border-[#cbf902] opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -105,7 +105,7 @@ const Contact = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono uppercase tracking-widest text-[3vw] sm:text-[1.2vw] md:text-[1vw]  hover:text-[#cbf902] transition-colors"
+                className="font-mono uppercase tracking-widest text-[3vw] sm:text-[1.8vw] md:text-[1.8vw] lg:text-[1.6vw]  hover:text-[#cbf902] transition-colors"
               >
                 {link.name}
               </a>
