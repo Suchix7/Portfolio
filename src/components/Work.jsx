@@ -153,6 +153,13 @@ const Work = () => {
               <div className="w-24 h-[1px] bg-white/5" />
               <span>0{projects.length}</span>
             </div>
+
+            {i === 0 && (
+              <div className="absolute flex flex-col items-center bottom-8 left-1/2 -translate-x-1/2 md:static md:mt-8 md:translate-x-0 text-[#cbf902] font-mono text-[12px] md:text-[14px] uppercase tracking-widest text-center animate-pulse">
+                Scroll Down
+                <div className="w-0 h-0 border-l-[4px] border-r-[4px] border-t-[8px] md:border-l-[6px] md:border-r-[6px] md:border-t-[12px] border-transparent border-t-[#cbf902] mx-auto mt-2 animate-bounce"></div>
+              </div>
+            )}
           </div>
         ))}
       </div>

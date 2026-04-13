@@ -120,10 +120,10 @@ const Hero = () => {
         {/* 2. Main Typography Block */}
         <div className="relative mb-32 lg:mb-48 w-full">
           <h1 className="hero-name-block opacity-0 flex flex-col gap-2 font-[1000] tracking-[-0.06em] uppercase whitespace-nowrap leading-[0.8]">
-            <div className="overflow-hidden italic text-[clamp(2rem,8vw,12rem)] md:text-[clamp(4rem,12vw,12rem)]">
+            <div className="overflow-hidden italic text-[clamp(2rem,8vw,18rem)] md:text-[10vw]">
               {wrapChars("SUJAL")}
             </div>
-            <div className="text-[#cbf902] italic text-[clamp(1.9rem,8vw,19rem)] md:text-[clamp(3.2rem,9vw,10.5rem)] leading-[0.7] mt-[-0.05em] md:mt-[-0.1em]">
+            <div className="text-[#cbf902] italic text-[clamp(1.9rem,8vw,16rem)] md:text-[8vw] leading-[0.7] mt-[-0.05em] md:mt-[-0.1em]">
               {wrapChars("CHITRAKAR")}
             </div>
             <span className="sr-only">
@@ -142,10 +142,10 @@ const Hero = () => {
         </div>
 
         {/* 3. Narrative Block */}
-        <div className="hero-content-block w-full max-w-7xl mt-32 md:mt-48 lg:mt-64">
+        <div className="hero-content-block w-full max-w-7xl md:max-w-4xl lg:max-w-4xl xl:max-w-7xl">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 ">
             <div className="flex-1 border-l-4 sm:border-l-10 border-[#cbf902] pl-6 md:pl-12 py-1">
-              <p className="text-sm md:text-xl lg:text-[1.8rem] font-bold leading-[1.2] tracking-tight text-white/95 uppercase max-w-xl ">
+              <p className="text-sm md:text-xl lg:text-[2vw]  font-bold leading-[1.2] tracking-tight text-white/95 uppercase ">
                 Developing digital products <br className="hidden md:block" />
                 that define{" "}
                 <span className="text-[#cbf902] italic border-b-2 border-[#cbf902]/30">
@@ -165,7 +165,7 @@ const Hero = () => {
               onClick={handleEnterStudio}
               className="group relative flex items-center gap-6 border border-white/10 px-6 py-4 md:px-12 md:py-7 transition-all duration-500 hover:border-[#cbf902] overflow-hidden bg-transparent"
             >
-              <span className="relative z-10 text-[9px] md:text-xs font-black tracking-[0.5em] uppercase group-hover:text-black transition-colors duration-300">
+              <span className="relative z-10 text-[9px] md:text-[1vw] font-black tracking-[0.5em] uppercase group-hover:text-black transition-colors duration-300">
                 Enter Studio
               </span>
               <div className="absolute inset-0 bg-[#cbf902] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.87,0,0.13,1)]" />
