@@ -117,7 +117,7 @@ const Work = () => {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative w-full max-w-5xl aspect-[16/9] overflow-hidden group border border-white/5 block mt-12 md:mt-0"
+              className="relative w-full max-w-5xl aspect-[9/16] md:aspect-[16/9] overflow-hidden group border border-white/5 block mt-12 md:mt-0"
             >
               <img
                 src={project.image}

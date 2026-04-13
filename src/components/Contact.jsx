@@ -96,7 +96,7 @@ const Contact = () => {
             <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b border-r border-[#cbf902] opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
 
-          <div className="flex gap-10 opacity-30 ">
+          <div className="flex gap-10 opacity-100 ">
             {socialLinks.map((link) => (
               <a
                 key={link.name}

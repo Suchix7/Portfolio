@@ -120,7 +120,7 @@ const Hero = () => {
         {/* 2. Main Typography Block */}
         <div className="relative mb-32 lg:mb-48 w-full">
           <h1 className="hero-name-block opacity-0 flex flex-col gap-2 font-[1000] tracking-[-0.06em] uppercase whitespace-nowrap leading-[0.8]">
-            <div className="overflow-hidden text-[clamp(2rem,8vw,12rem)] md:text-[clamp(4rem,12vw,12rem)]">
+            <div className="overflow-hidden italic text-[clamp(2rem,8vw,12rem)] md:text-[clamp(4rem,12vw,12rem)]">
               {wrapChars("SUJAL")}
             </div>
             <div className="text-[#cbf902] italic text-[clamp(1.9rem,8vw,19rem)] md:text-[clamp(3.2rem,9vw,10.5rem)] leading-[0.7] mt-[-0.05em] md:mt-[-0.1em]">

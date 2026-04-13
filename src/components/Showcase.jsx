@@ -13,7 +13,7 @@ const campaignMedia = [
     image:
       "https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?auto=format&fit=crop&q=80&w=1422",
     aspect: "aspect-[9/16]",
-    position: "top-[5%] right-[5%] lg:right-[10%] w-[40vw] lg:w-[22vw]",
+    position: "top-[5%] right-[5%] lg:right-[20%] w-[40vw] lg:w-[22vw]",
     entry: { x: "80vw", y: "-20vh", rotation: 15 },
     finalRotation: -4,
   },
@@ -24,7 +24,7 @@ const campaignMedia = [
     image:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1920",
     aspect: "aspect-video",
-    position: "top-[35%] right-[10%] lg:right-[25%] w-[60vw] lg:w-[35vw]",
+    position: "top-[35%] right-[10%] lg:right-[35%] w-[60vw] lg:w-[35vw]",
     entry: { x: "100vw", y: "0vh", rotation: -10 },
     finalRotation: 2,
   },
@@ -57,7 +57,7 @@ const campaignMedia = [
     image:
       "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1000",
     aspect: "aspect-square",
-    position: "top-[15%] left-[5%] lg:left-[35%] w-[30vw] lg:w-[15vw]",
+    position: "top-[15%] left-[5%] lg:left-[20%] w-[30vw] lg:w-[15vw]",
     entry: { x: "0vw", y: "-80vh", rotation: 10 },
     finalRotation: -3,
   },
