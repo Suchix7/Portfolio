@@ -1,16 +1,29 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 const CustomCursor = () => {
   const outerRef = useRef(null);
   const innerRef = useRef(null);
 
+  // Devices with a coarse pointer (touch) never fire mousemove, so the rig
+  // would otherwise sit glued to the top-left corner forever. Bail out early.
+  const [enabled] = useState(
+    () => typeof window !== "undefined" && window.matchMedia("(pointer: fine)").matches,
+  );
+
   useEffect(() => {
+    if (!enabled) return;
+
     const outer = outerRef.current;
     const inner = innerRef.current;
+    let hasMoved = false;
 
     const ctx = gsap.context(() => {
       const moveCursor = (e) => {
+        if (!hasMoved) {
+          hasMoved = true;
+          gsap.to([outer, inner], { opacity: 1, duration: 0.3 });
+        }
         gsap.to(outer, {
           x: e.clientX,
           y: e.clientY,
@@ -74,17 +87,19 @@ const CustomCursor = () => {
     }, outerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [enabled]);
+
+  if (!enabled) return null;
 
   return (
     <>
       <div
         ref={outerRef}
-        className="fixed top-0 left-0 w-10 h-10 border border-white/50 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 mix-blend-difference"
+        className="fixed top-0 left-0 w-10 h-10 border border-white/50 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 mix-blend-difference opacity-0"
       />
       <div
         ref={innerRef}
-        className="fixed top-0 left-0 w-1.5 h-1.5 bg-[#cbf902] rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2"
+        className="fixed top-0 left-0 w-1.5 h-1.5 bg-[#cbf902] rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 opacity-0"
       />
     </>
   );

@@ -4,62 +4,88 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Using responsive absolute positioning (e.g., w-[45vw] on mobile, lg:w-[22vw] on desktop)
-const campaignMedia = [
+// The actual operating process behind the case studies above —
+// Voice-of-Customer research down to messaging pillars, pillars down to
+// angles, angles down to hooks, then a structured, one-variable-at-a-time
+// test pyramid tracked against Hook Rate / Hold Rate before anything scales.
+const stages = [
   {
     id: "01",
-    brand: "Nexa",
-    campaign: "Launch Reel",
+    tag: "Discovery",
+    title: "Voice-of-Customer Research",
+    description:
+      "Before a single hook is written, I mine reviews, comments, competitor angles and support tickets for the exact language buyers already use. That raw phrasing gets distilled into 3–5 messaging pillars — the foundation everything downstream has to trace back to.",
+    stats: [
+      { label: "VoC phrases pulled", value: "150+" },
+      { label: "Messaging pillars", value: "3–5" },
+    ],
     image:
-      "https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?auto=format&fit=crop&q=80&w=1422",
-    aspect: "aspect-[9/16]",
-    position: "top-[5%] right-[5%] lg:right-[10%] w-[40vw] lg:w-[22vw]",
-    entry: { x: "80vw", y: "-20vh", rotation: 15 },
-    finalRotation: -4,
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400&auto=format&fit=crop",
   },
   {
     id: "02",
-    brand: "Atlas",
-    campaign: "Brand Film",
+    tag: "Ideation",
+    title: "Angle & Hook Architecture",
+    description:
+      "Each pillar branches into multiple angles — the specific lens a viewer sees the offer through (pain, curiosity, social proof, mechanism). Every angle then spawns several hooks: the first 3 seconds designed purely to stop the scroll before the argument even starts.",
+    stats: [
+      { label: "Angles per pillar", value: "2–4" },
+      { label: "Hooks per angle", value: "3–6" },
+    ],
     image:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1920",
-    aspect: "aspect-video",
-    position: "top-[35%] right-[10%] lg:right-[25%] w-[60vw] lg:w-[35vw]",
-    entry: { x: "100vw", y: "0vh", rotation: -10 },
-    finalRotation: 2,
+      "https://images.unsplash.com/photo-1552664688-cf412ec27db2?q=80&w=1400&auto=format&fit=crop",
   },
   {
     id: "03",
-    brand: "Orbit",
-    campaign: "Social Burst",
+    tag: "Production",
+    title: "Script, Storyboard & Shoot",
+    description:
+      "Winning hooks get scripted into full VSL or UGC storyboards — structured around a Hook → Retain → Reward spine so retention has somewhere to go after the open. Production stays lightweight and fast so a concept can go from brief to a testable cut in days.",
+    stats: [
+      { label: "Format", value: "VSL / UGC" },
+      { label: "Brief-to-cut", value: "< 5 days" },
+    ],
     image:
-      "https://images.unsplash.com/photo-1604871000636-074fa5117945?auto=format&fit=crop&q=80&w=1422",
-    aspect: "aspect-[9/16]",
-    position: "bottom-[5%] lg:bottom-[5%] right-[5%] w-[35vw] lg:w-[18vw]",
-    entry: { x: "60vw", y: "50vh", rotation: 20 },
-    finalRotation: -6,
+      "https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?q=80&w=1400&auto=format&fit=crop",
   },
   {
     id: "04",
-    brand: "Vanta",
-    campaign: "Growth Ad",
+    tag: "Validation",
+    title: "Structured Split-Testing",
+    description:
+      "One variable at a time — hooks first, then value proposition, then CTA — so a result is never ambiguous about what actually moved it. Every test is scored on Hook Rate (3-sec view rate) and Hold Rate (15-sec+ retention) before spend is ever touched.",
+    stats: [
+      { label: "Hook Rate target", value: "30%+" },
+      { label: "Hold Rate target", value: "10%+" },
+    ],
     image:
-      "https://images.unsplash.com/photo-1775135999512-145e9c85b114?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    aspect: "aspect-video",
-    position: "bottom-[10%] left-[5%] lg:left-[20%] w-[50vw] lg:w-[28vw]",
-    entry: { x: "0vw", y: "80vh", rotation: -15 },
-    finalRotation: 5,
+      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1400&auto=format&fit=crop",
   },
   {
     id: "05",
-    brand: "Pulse",
-    campaign: "Cutdown",
+    tag: "Diagnosis",
+    title: "Performance Data & Iteration",
+    description:
+      "A weak Hook Rate with a strong Hold Rate means the open needs work, not the story — a weak Hold Rate means the opposite. That diagnosis gets logged in a running creative audit so every new brief starts from what the data already proved, not a blank page.",
+    stats: [
+      { label: "Audit cadence", value: "Weekly" },
+      { label: "Fix cost", value: "Re-edit, not re-shoot" },
+    ],
     image:
-      "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1000",
-    aspect: "aspect-square",
-    position: "top-[15%] left-[5%] lg:left-[35%] w-[30vw] lg:w-[15vw]",
-    entry: { x: "0vw", y: "-80vh", rotation: 10 },
-    finalRotation: -3,
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1400&auto=format&fit=crop",
+  },
+  {
+    id: "06",
+    tag: "Growth",
+    title: "Scale & Creative Refresh",
+    description:
+      "Confirmed winners get pushed into broader budget while the next round of variations is already in production — creative fatigue is tracked as a leading indicator, not discovered after CPA spikes, so spend scales without the account ever going quiet.",
+    stats: [
+      { label: "Refresh cadence", value: "Bi-weekly" },
+      { label: "Fatigue signal", value: "Hook Rate decay" },
+    ],
+    image:
+      "https://images.unsplash.com/photo-1618044733300-9472054094ee?q=80&w=1400&auto=format&fit=crop",
   },
 ];
 
@@ -68,60 +94,31 @@ const Showcase = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const cards = gsap.utils.toArray(".showcase-card");
+      // Reveal each stage row as it enters
+      gsap.utils.toArray(".stage-row").forEach((row) => {
+        gsap.from(row, {
+          opacity: 0,
+          y: 60,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: row,
+            start: "top 82%",
+          },
+        });
+      });
 
-      gsap.set(cards, { transformPerspective: 1000 });
-
-      // Universal timeline for all screen sizes
-      const tl = gsap.timeline({
+      // Vertical rail fills with scroll progress through the whole section
+      gsap.to(".stage-rail-fill", {
+        scaleY: 1,
+        ease: "none",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
-          end: "+=200%",
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1,
+          start: "top 60%",
+          end: "bottom 60%",
+          scrub: 0.5,
         },
       });
-
-      cards.forEach((card, index) => {
-        const entry = campaignMedia[index].entry;
-        const finalRot = campaignMedia[index].finalRotation;
-
-        tl.fromTo(
-          card,
-          {
-            x: entry.x,
-            y: entry.y,
-            rotation: entry.rotation,
-            opacity: 0,
-            scale: 1.2,
-            filter: "blur(20px)",
-          },
-          {
-            x: "0vw",
-            y: "0vh",
-            rotation: finalRot,
-            opacity: 1,
-            scale: 1,
-            filter: "blur(0px)",
-            ease: "power3.out",
-          },
-          0,
-        );
-      });
-
-      // Background text subtle fade/parallax
-      tl.to(
-        ".showcase-bg-text",
-        {
-          scale: 0.95,
-          opacity: 0.4,
-          filter: "blur(4px)",
-          ease: "none",
-        },
-        0,
-      );
     }, sectionRef);
 
     return () => ctx.revert();
@@ -130,55 +127,96 @@ const Showcase = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#070707] text-white overflow-hidden min-h-screen"
+      className="relative bg-[#070707] text-white overflow-hidden py-28 md:py-40 px-6 sm:px-12 md:px-24 lg:px-32 border-t border-white/5"
     >
-      <div className="absolute inset-0 pointer-events-none opacity-[0.05] [background:radial-gradient(circle_at_12%_18%,#cbf902_0%,transparent_26%),radial-gradient(circle_at_82%_78%,#cbf902_0%,transparent_30%),radial-gradient(circle_at_50%_50%,#ffffff_0%,transparent_44%)]" />
+      <div className="absolute inset-0 pointer-events-none opacity-[0.05] [background:radial-gradient(circle_at_12%_18%,#cbf902_0%,transparent_26%),radial-gradient(circle_at_82%_78%,#cbf902_0%,transparent_30%)]" />
 
-      {/* --- UNIVERSAL VIEW (Pinned, Overlapping Collage for all devices) --- */}
-      <div className="relative w-full h-screen">
-        {/* The Background Text */}
-        <div className="showcase-bg-text absolute inset-0 flex flex-col justify-center px-6 md:px-12 lg:px-24 z-0 pointer-events-none">
-          <p className="font-mono text-[10px] sm:text-xs tracking-[0.42em] uppercase text-[#cbf902] mb-4 lg:mb-6">
-            Campaign_Image_Wall // 02
+      {/* Shared centered container — keeps header + timeline aligned and
+          stops the whole section from hugging the left edge on wide screens */}
+      <div className="relative z-10 max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="mb-20 md:mb-28 max-w-3xl">
+          <div className="w-20 h-px bg-[#cbf902] mb-6" />
+          <p className="font-mono text-[10px] sm:text-xs tracking-[0.42em] uppercase text-[#cbf902] mb-4">
+            Strategy_Framework // 02
           </p>
-          <h2 className="text-[10vw] md:text-[11vw] lg:text-[9vw] font-black uppercase italic tracking-[-0.05em] leading-[0.85]">
-            Cinematic
-            <br />
-            <span className="text-[#cbf902]">Stories</span>
-            <br />
-            In Motion
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase italic tracking-[-0.04em] leading-[0.9]">
+            The <span className="text-[#cbf902]">Process</span>
           </h2>
-          <p className="max-w-xs md:max-w-sm lg:max-w-md text-xs sm:text-sm lg:text-base text-white/65 mt-6 lg:mt-8 leading-relaxed">
-            Premium campaign visuals assembled into a scroll-driven canvas.
-            Scroll to assemble the editorial composition.
+          <p className="mt-6 text-sm sm:text-base text-white/50 leading-relaxed max-w-xl">
+            Every campaign runs through the same six-stage system — research
+            down to a scaled winner — so results are repeatable, not lucky.
           </p>
         </div>
 
-        {/* The Floating Images */}
-        <div className="absolute inset-0 z-10 pointer-events-none">
-          {campaignMedia.map((item) => (
-            <article
-              key={item.id}
-              className={`showcase-card absolute ${item.position} ${item.aspect} rounded-xl sm:rounded-2xl bg-black/40 border border-white/15 shadow-[0_20px_40px_rgba(0,0,0,0.5)] lg:shadow-[0_30px_60px_rgba(0,0,0,0.6)] overflow-hidden pointer-events-auto group`}
-            >
-              <img
-                src={item.image}
-                alt={item.campaign}
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-80" />
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical rail — centered on the node circles (w-10 = 40px, so
+              the rail sits at their midpoint, 20px in from the row edge) */}
+          <div className="absolute left-5 top-2 bottom-2 w-px bg-white/10 hidden sm:block">
+            <div className="stage-rail-fill absolute inset-0 bg-[#cbf902] origin-top scale-y-0" />
+          </div>
 
-              {/* Text inside cards scaled for mobile vs desktop */}
-              <div className="absolute left-3 lg:left-4 right-3 lg:right-4 bottom-3 lg:bottom-4 z-20">
-                <p className="font-mono text-[7px] lg:text-[9px] tracking-[0.3em] uppercase text-white/70 mb-1">
-                  {item.id}
-                </p>
-                <h3 className="text-sm sm:text-base lg:text-xl font-black uppercase italic leading-none tracking-tight">
-                  {item.brand}
+          <div className="flex flex-col gap-16 md:gap-24">
+            {stages.map((stage, i) => (
+              <div
+                key={stage.id}
+                className={`stage-row relative sm:pl-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center`}
+              >
+                {/* Node on rail */}
+                <div className="hidden sm:flex absolute left-0 top-1 w-10 h-10 rounded-full border border-white/15 bg-[#0a0a0a] items-center justify-center font-mono text-[10px] text-[#cbf902] z-10">
+                  {stage.id}
+                </div>
+
+              {/* Text */}
+              <div
+                className={`lg:col-span-7 ${
+                  i % 2 === 1 ? "lg:order-2" : ""
+                }`}
+              >
+                <span className="inline-block font-mono text-[9px] sm:text-[10px] tracking-[0.4em] uppercase text-[#cbf902]/70 border border-[#cbf902]/20 bg-[#cbf902]/5 px-2 py-1 mb-4">
+                  {stage.tag}
+                </span>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase italic tracking-tight leading-[1.05] mb-4">
+                  {stage.title}
                 </h3>
+                <p className="text-white/50 text-sm sm:text-base leading-relaxed max-w-xl mb-6">
+                  {stage.description}
+                </p>
+                <div className="flex flex-wrap gap-6">
+                  {stage.stats.map((s) => (
+                    <div key={s.label}>
+                      <div className="text-lg sm:text-xl font-black italic text-white">
+                        {s.value}
+                      </div>
+                      <div className="font-mono text-[8px] sm:text-[9px] uppercase tracking-[0.2em] text-white/30">
+                        {s.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </article>
-          ))}
+
+              {/* Image */}
+              <div
+                className={`lg:col-span-5 ${i % 2 === 1 ? "lg:order-1" : ""}`}
+              >
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-black/40 group">
+                  <img
+                    src={stage.image}
+                    alt={stage.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-3 font-mono text-[8px] uppercase tracking-[0.3em] text-white/60">
+                    Stage_{stage.id}
+                  </div>
+                </div>
+              </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

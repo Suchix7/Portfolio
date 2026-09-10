@@ -84,7 +84,7 @@ const Hero = () => {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen w-full flex  flex-col bg-[#0a0a0a] text-white px-6 sm:px-12 md:px-20 lg:px-32 overflow-hidden pt-32 md:pt-48"
+      className="relative min-h-screen w-full flex  flex-col bg-[#0a0a0a] text-white px-6 sm:px-12 md:px-20 lg:px-32 overflow-hidden pt-20 sm:pt-28 md:pt-48"
     >
       {/* BACKGROUND LAYER 1: Subtle Technical Grid */}
       <div
@@ -100,25 +100,25 @@ const Hero = () => {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.03]">
         <div className="marquee-inner w-full rotate-[-5deg] scale-110">
           <div className="marquee-track flex w-max whitespace-nowrap font-black text-[20vw] leading-none uppercase tracking-tighter italic">
-            <span>PRECISION SPEED PRECISION SPEED PRECISION SPEED&nbsp;</span>
-            <span>PRECISION SPEED PRECISION SPEED PRECISION SPEED&nbsp;</span>
-            <span>PRECISION SPEED PRECISION SPEED PRECISION SPEED&nbsp;</span>
+            <span>CREATIVE STRATEGY VSL HOOKS AD SCALING ROAS&nbsp;</span>
+            <span>CREATIVE STRATEGY VSL HOOKS AD SCALING ROAS&nbsp;</span>
+            <span>CREATIVE STRATEGY VSL HOOKS AD SCALING ROAS&nbsp;</span>
           </div>
         </div>
       </div>
 
       {/* 1. Header HUD */}
-      <nav className="relative z-20 w-full py-6 flex  justify-between items-center font-mono text-[8px] tracking-[0.5em] text-white/30 uppercase mt-12">
-        <span className="hidden sm:block">Portfolio_v2.0</span>
+      <nav className="relative z-20 w-full py-6 flex  justify-between items-center font-mono text-[8px] tracking-[0.25em] sm:tracking-[0.5em] text-white/30 uppercase mt-4 sm:mt-12">
+        <span className="hidden sm:block">Strategy_Studio_v2.0</span>
         <div className="hidden lg:block h-px w-24 bg-white/10" />
         <span className="text-[#cbf902]/60 font-bold">
           SUJAL_CHITRAKAR // 2026
         </span>
       </nav>
 
-      <div className="flex-1 gap-8  flex flex-col justify-center relative z-10 max-w-full">
+      <div className="flex-1 gap-8 flex flex-col justify-center relative z-10 max-w-full">
         {/* 2. Main Typography Block */}
-        <div className="relative mb-32 lg:mb-48 w-full">
+        <div className="relative mb-12 sm:mb-20 lg:mb-48 w-full">
           <h1 className="hero-name-block opacity-0 flex flex-col gap-2 font-[1000] tracking-[-0.06em] uppercase whitespace-nowrap leading-[0.8]">
             <div className="overflow-hidden text-[clamp(2rem,8vw,12rem)] md:text-[clamp(4rem,12vw,12rem)]">
               {wrapChars("SUJAL")}
@@ -127,7 +127,7 @@ const Hero = () => {
               {wrapChars("CHITRAKAR")}
             </div>
             <span className="sr-only">
-              Web Designer & Digital Architect in Kathmandu, Nepal
+              Creative Strategist & VSL Specialist in Kathmandu, Nepal
             </span>
           </h1>
 
@@ -142,21 +142,21 @@ const Hero = () => {
         </div>
 
         {/* 3. Narrative Block */}
-        <div className="hero-content-block w-full max-w-7xl mt-32 md:mt-48 lg:mt-64">
+        <div className="hero-content-block w-full max-w-7xl mt-12 sm:mt-20 md:mt-48 lg:mt-64">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 ">
             <div className="flex-1 border-l-4 sm:border-l-10 border-[#cbf902] pl-6 md:pl-12 py-1">
-              <p className="text-sm md:text-xl lg:text-[1.8rem] font-bold leading-[1.2] tracking-tight text-white/95 uppercase max-w-xl ">
-                Developing digital products <br className="hidden md:block" />
-                that define{" "}
+              <p className="text-sm md:text-xl lg:text-[1.8rem] font-bold leading-[1.2] tracking-tight text-white/95 uppercase max-w-2xl ">
+                Scaling Meta ad spend <br className="hidden md:block" />
+                with data-backed{" "}
                 <span className="text-[#cbf902] italic border-b-2 border-[#cbf902]/30">
-                  Performance
+                  Creative Strategy
                 </span>
                 .
               </p>
               <div className="flex items-center gap-4 mt-6">
                 <div className="w-10 h-px bg-white/20" />
                 <p className="text-white/40 font-mono text-[8px] md:text-[10px] tracking-[0.4em] uppercase">
-                  Frontend Engineering // Design Systems
+                  VSL Scripting // Ad Creative Testing // ROAS Scaling
                 </p>
               </div>
             </div>
@@ -166,7 +166,7 @@ const Hero = () => {
               className="group relative flex items-center gap-6 border border-white/10 px-6 py-4 md:px-12 md:py-7 transition-all duration-500 hover:border-[#cbf902] overflow-hidden bg-transparent"
             >
               <span className="relative z-10 text-[9px] md:text-xs font-black tracking-[0.5em] uppercase group-hover:text-black transition-colors duration-300">
-                Enter Studio
+                Explore Strategy
               </span>
               <div className="absolute inset-0 bg-[#cbf902] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.87,0,0.13,1)]" />
             </button>
@@ -180,14 +180,14 @@ const Hero = () => {
       <footer className="w-full py-8 flex justify-between items-end opacity-20 pointer-events-none">
         <div className="space-y-1">
           <p className="text-[8px] font-mono tracking-widest uppercase">
-            Kernel_Status: Active
+            Campaign_Status: Active
           </p>
           <p className="text-[8px] font-mono tracking-widest uppercase">
-            Render_Engine: 120fps
+            Meta_Ad_Spend: 2x Scaled
           </p>
         </div>
         <p className="text-[9px] font-mono tracking-[0.3em] uppercase hidden md:block">
-          Precision meets motion © 2026
+          Creative Strategy & Conversion © 2026
         </p>
       </footer>
 

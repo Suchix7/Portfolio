@@ -60,8 +60,8 @@ const Preloader = ({ onComplete }) => {
       <div className="relative w-full max-w-sm px-10">
         <div className="loader-text mb-4 flex justify-between items-end font-mono">
           <div className="flex flex-col gap-1">
-            <span className="text-[8px] text-white/20 uppercase tracking-[0.4em]">Initialize_Core</span>
-            <span className="text-[10px] text-[#cbf902] uppercase tracking-[0.2em] font-bold italic">System_Boot</span>
+            <span className="text-[8px] text-white/20 uppercase tracking-[0.4em]">Analyzing_Ad_Metrics</span>
+            <span className="text-[10px] text-[#cbf902] uppercase tracking-[0.2em] font-bold italic">Strategy_Boot</span>
           </div>
           <span className="text-4xl font-black italic text-white leading-none tracking-tighter">
             {counter}%
@@ -77,7 +77,7 @@ const Preloader = ({ onComplete }) => {
         </div>
 
         <div className="loader-text mt-4 flex justify-between opacity-20 font-mono text-[8px] tracking-widest uppercase">
-          <span>Sujal_C // Node_NP</span>
+          <span>Sujal_C // Creative_Strategy</span>
           <span>© 2026</span>
         </div>
       </div>

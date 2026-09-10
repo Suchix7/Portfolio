@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SmoothScroll from "./components/SmoothScroll";
 import CustomCursor from "./components/CustomCursor";
 import Hero from "./components/Hero";
 import Showcase from "./components/Showcase";
 import Work from "./components/Work";
+import SplitTest from "./components/SplitTest";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Preloader from "./components/Preloader";
@@ -56,10 +56,14 @@ const App = () => {
                   <Work />
                 </div>
 
+                <div aria-label="Split Test Section">
+                  <SplitTest />
+                </div>
+
                 <div aria-label="About Section">
                   <About />
                 </div>
-                <div aria-label="Showcase Section">
+                <div aria-label="Process Section">
                   <Showcase />
                 </div>
                 <div aria-label="Contact Section">

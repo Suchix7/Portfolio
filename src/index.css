@@ -8,16 +8,23 @@
   --neutral-dark: #141414;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  cursor: none !important;
-}
-
-@media (pointer: coarse) {
+/* NOTE: this reset must live inside @layer base. Tailwind's utilities
+   (p-*, m-*, px-*, mx-auto, etc.) are emitted into named layers, and per
+   the CSS Cascade Layers spec, ANY unlayered rule beats EVERY layered rule
+   regardless of specificity. An unlayered `* { margin: 0; padding: 0; }`
+   would silently win over every spacing utility on the entire site. */
+@layer base {
   * {
-    cursor: auto !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none !important;
+  }
+
+  @media (pointer: coarse) {
+    * {
+      cursor: auto !important;
+    }
   }
 }
 
